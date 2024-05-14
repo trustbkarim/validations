@@ -35,7 +35,7 @@ public class Reservation implements Serializable {
     private int roomNumber;
 
     @Column(nullable = false)
-    private List<String> extras;
+    private String[] extras;
 
     @ManyToOne(targetEntity = User.class, cascade = CascadeType.REMOVE)
     @JoinColumn(name = "user_id", nullable = false, referencedColumnName = "id")
